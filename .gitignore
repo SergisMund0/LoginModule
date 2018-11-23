@@ -1,9 +1,0 @@
-#Xcode
-
-xcuserdata/
-DerivedData
-
-#Cocoapods
-
-Pods/
-Podfile.lock
