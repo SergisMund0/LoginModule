@@ -13,6 +13,13 @@
 		EB07BF3321A7037800958158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB07BF3221A7037800958158 /* Assets.xcassets */; };
 		EB07BF3621A7037800958158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB07BF3421A7037800958158 /* LaunchScreen.storyboard */; };
 		EB07BF4121A7037800958158 /* LoginModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF4021A7037800958158 /* LoginModuleTests.swift */; };
+		EB07BF5121A814B500958158 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5021A814B500958158 /* LoginProtocols.swift */; };
+		EB07BF5321A8152800958158 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5221A8152800958158 /* LoginViewController.swift */; };
+		EB07BF5521A8153800958158 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5421A8153800958158 /* LoginPresenter.swift */; };
+		EB07BF5721A8154800958158 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5621A8154800958158 /* LoginInteractor.swift */; };
+		EB07BF5921A8155600958158 /* LoginEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5821A8155600958158 /* LoginEntities.swift */; };
+		EB07BF5B21A8156200958158 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5A21A8156200958158 /* LoginRouter.swift */; };
+		EB07BF5D21A8167F00958158 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB07BF5C21A8167F00958158 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		EB07BF3C21A7037800958158 /* LoginModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB07BF4021A7037800958158 /* LoginModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleTests.swift; sourceTree = "<group>"; };
 		EB07BF4221A7037800958158 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB07BF5021A814B500958158 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		EB07BF5221A8152800958158 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB07BF5421A8153800958158 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		EB07BF5621A8154800958158 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		EB07BF5821A8155600958158 /* LoginEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntities.swift; sourceTree = "<group>"; };
+		EB07BF5A21A8156200958158 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		EB07BF5C21A8167F00958158 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,12 @@
 		EB07BF2A21A7037600958158 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				EB07BF5021A814B500958158 /* LoginProtocols.swift */,
+				EB07BF4F21A8147100958158 /* View */,
+				EB07BF4E21A8146100958158 /* Presenter */,
+				EB07BF4D21A8145700958158 /* Interactor */,
+				EB07BF4C21A8144D00958158 /* Entity */,
+				EB07BF4B21A8144100958158 /* Router */,
 				EB07BF2B21A7037600958158 /* AppDelegate.swift */,
 				EB07BF2D21A7037600958158 /* ViewController.swift */,
 				EB07BF2F21A7037600958158 /* Main.storyboard */,
@@ -94,6 +114,47 @@
 				EB07BF4221A7037800958158 /* Info.plist */,
 			);
 			path = LoginModuleTests;
+			sourceTree = "<group>";
+		};
+		EB07BF4B21A8144100958158 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EB07BF5A21A8156200958158 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EB07BF4C21A8144D00958158 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EB07BF5821A8155600958158 /* LoginEntities.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EB07BF4D21A8145700958158 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EB07BF5621A8154800958158 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EB07BF4E21A8146100958158 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EB07BF5421A8153800958158 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EB07BF4F21A8147100958158 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB07BF5221A8152800958158 /* LoginViewController.swift */,
+				EB07BF5C21A8167F00958158 /* LoginViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +240,7 @@
 			files = (
 				EB07BF3621A7037800958158 /* LaunchScreen.storyboard in Resources */,
 				EB07BF3321A7037800958158 /* Assets.xcassets in Resources */,
+				EB07BF5D21A8167F00958158 /* LoginViewController.xib in Resources */,
 				EB07BF3121A7037600958158 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,8 +259,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB07BF5121A814B500958158 /* LoginProtocols.swift in Sources */,
 				EB07BF2E21A7037600958158 /* ViewController.swift in Sources */,
+				EB07BF5921A8155600958158 /* LoginEntities.swift in Sources */,
+				EB07BF5721A8154800958158 /* LoginInteractor.swift in Sources */,
+				EB07BF5321A8152800958158 /* LoginViewController.swift in Sources */,
 				EB07BF2C21A7037600958158 /* AppDelegate.swift in Sources */,
+				EB07BF5B21A8156200958158 /* LoginRouter.swift in Sources */,
+				EB07BF5521A8153800958158 /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
