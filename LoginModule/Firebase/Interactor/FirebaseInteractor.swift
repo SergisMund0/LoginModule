@@ -22,7 +22,21 @@ final class FirebaseInteractor {
 extension FirebaseInteractor: FirebaseInteractorInjection {
     func createUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
-            guard let user = authResult?.user else { return }
+            //guard let user = authResult?.user else { return }
+        }
+    }
+    
+    func signIn(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            
+        }
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
         }
     }
 }

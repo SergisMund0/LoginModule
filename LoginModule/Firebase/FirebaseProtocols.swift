@@ -10,6 +10,8 @@ import Foundation
 
 protocol FirebaseInteractorInjection {
     func createUser(email: String, password: String)
+    func signIn(email: String, password: String)
+    func signOut()
 }
 
 protocol FirebaseInteractorDelegate {
