@@ -22,6 +22,10 @@
 		EB07BF5921A8155600958158 /* LoginEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5821A8155600958158 /* LoginEntities.swift */; };
 		EB07BF5B21A8156200958158 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5A21A8156200958158 /* LoginRouter.swift */; };
 		EB07BF5D21A8167F00958158 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB07BF5C21A8167F00958158 /* LoginViewController.xib */; };
+		EB74111721ABFE5F0033A6F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB74111621ABFE5F0033A6F3 /* GoogleService-Info.plist */; };
+		EBA0CE1621A847460090BB83 /* FirebaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1521A847460090BB83 /* FirebaseInteractor.swift */; };
+		EBA0CE1821A847530090BB83 /* FirebaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1721A847530090BB83 /* FirebaseRouter.swift */; };
+		EBA0CE1A21A847620090BB83 /* FirebaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		EB07BF5821A8155600958158 /* LoginEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntities.swift; sourceTree = "<group>"; };
 		EB07BF5A21A8156200958158 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		EB07BF5C21A8167F00958158 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EB74111621ABFE5F0033A6F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBA0CE1521A847460090BB83 /* FirebaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseInteractor.swift; sourceTree = "<group>"; };
+		EBA0CE1721A847530090BB83 /* FirebaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRouter.swift; sourceTree = "<group>"; };
+		EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,8 @@
 		EB07BF2A21A7037600958158 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				EB74111521ABFE5F0033A6F3 /* Resources */,
+				EBA0CE1121A846F70090BB83 /* Firebase */,
 				EB07BF5021A814B500958158 /* LoginProtocols.swift */,
 				EB07BF4F21A8147100958158 /* View */,
 				EB07BF4E21A8146100958158 /* Presenter */,
@@ -187,6 +197,48 @@
 				EB07BF5C21A8167F00958158 /* LoginViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EB74111521ABFE5F0033A6F3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB74111621ABFE5F0033A6F3 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBA0CE1121A846F70090BB83 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */,
+				EBA0CE1221A847330090BB83 /* Entity */,
+				EBA0CE1321A847330090BB83 /* Interactor */,
+				EBA0CE1421A847330090BB83 /* Router */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		EBA0CE1221A847330090BB83 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EBA0CE1321A847330090BB83 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EBA0CE1521A847460090BB83 /* FirebaseInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EBA0CE1421A847330090BB83 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EBA0CE1721A847530090BB83 /* FirebaseRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +327,7 @@
 			files = (
 				EB07BF3621A7037800958158 /* LaunchScreen.storyboard in Resources */,
 				EB07BF3321A7037800958158 /* Assets.xcassets in Resources */,
+				EB74111721ABFE5F0033A6F3 /* GoogleService-Info.plist in Resources */,
 				EB07BF5D21A8167F00958158 /* LoginViewController.xib in Resources */,
 				EB07BF3121A7037600958158 /* Main.storyboard in Resources */,
 			);
@@ -299,6 +352,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LoginModule/Pods-LoginModule-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -307,6 +361,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -371,10 +426,13 @@
 				EB07BF2E21A7037600958158 /* ViewController.swift in Sources */,
 				EB07BF5921A8155600958158 /* LoginEntities.swift in Sources */,
 				EB07BF5721A8154800958158 /* LoginInteractor.swift in Sources */,
+				EBA0CE1A21A847620090BB83 /* FirebaseProtocols.swift in Sources */,
 				EB07BF5321A8152800958158 /* LoginViewController.swift in Sources */,
 				EB07BF2C21A7037600958158 /* AppDelegate.swift in Sources */,
 				EB07BF5B21A8156200958158 /* LoginRouter.swift in Sources */,
+				EBA0CE1821A847530090BB83 /* FirebaseRouter.swift in Sources */,
 				EB07BF5521A8153800958158 /* LoginPresenter.swift in Sources */,
+				EBA0CE1621A847460090BB83 /* FirebaseInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
