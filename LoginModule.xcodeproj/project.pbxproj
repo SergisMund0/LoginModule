@@ -135,14 +135,8 @@
 		EB07BF2A21A7037600958158 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				EB74111521ABFE5F0033A6F3 /* Resources */,
-				EBA0CE1121A846F70090BB83 /* Firebase */,
-				EB07BF5021A814B500958158 /* LoginProtocols.swift */,
-				EB07BF4F21A8147100958158 /* View */,
-				EB07BF4E21A8146100958158 /* Presenter */,
-				EB07BF4D21A8145700958158 /* Interactor */,
-				EB07BF4C21A8144D00958158 /* Entity */,
-				EB07BF4B21A8144100958158 /* Router */,
+				EBC74AFA21B0239200D0D33A /* FirebaseScene */,
+				EBC74AF921B0236600D0D33A /* LoginScene */,
 				EB07BF2B21A7037600958158 /* AppDelegate.swift */,
 				EB07BF2D21A7037600958158 /* ViewController.swift */,
 				EB07BF2F21A7037600958158 /* Main.storyboard */,
@@ -245,6 +239,28 @@
 				EBA0CE1721A847530090BB83 /* FirebaseRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		EBC74AF921B0236600D0D33A /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				EB07BF5021A814B500958158 /* LoginProtocols.swift */,
+				EB07BF4F21A8147100958158 /* View */,
+				EB07BF4E21A8146100958158 /* Presenter */,
+				EB07BF4D21A8145700958158 /* Interactor */,
+				EB07BF4C21A8144D00958158 /* Entity */,
+				EB07BF4B21A8144100958158 /* Router */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		EBC74AFA21B0239200D0D33A /* FirebaseScene */ = {
+			isa = PBXGroup;
+			children = (
+				EB74111521ABFE5F0033A6F3 /* Resources */,
+				EBA0CE1121A846F70090BB83 /* Firebase */,
+			);
+			path = FirebaseScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
