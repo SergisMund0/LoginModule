@@ -9,11 +9,11 @@
 import Foundation
 
 protocol LoginViewInjection {
-    
+    func viewDidReceiveUpdates(loginViewModel: LoginViewModel)
 }
 
 protocol LoginViewDelegate {
-    
+    func viewDidSendUpdates(loginViewModel: LoginViewModel?)
 }
 
 protocol LoginPresenterInjection {
@@ -33,7 +33,7 @@ protocol LoginInteractorDelegate {
 }
 
 protocol LoginRouterInjection {
-    
+    static func setup() -> LoginViewInjection?
 }
 
 protocol LoginRouterDelegate {

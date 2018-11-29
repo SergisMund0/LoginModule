@@ -20,14 +20,14 @@ final class FirebaseInteractor {
 }
 
 extension FirebaseInteractor: FirebaseInteractorInjection {
-    func createUser(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+    func createUser(userModel: UserModel) {
+        Auth.auth().createUser(withEmail: userModel.email, password: userModel.password) { (authResult, error) in
             //guard let user = authResult?.user else { return }
         }
     }
     
-    func signIn(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+    func signIn(userModel: UserModel) {
+        Auth.auth().signIn(withEmail: userModel.email, password: userModel.password) { user, error in
             
         }
     }

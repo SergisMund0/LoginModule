@@ -12,6 +12,8 @@ final class LoginRouter {
     
 }
 
-extension LoginRouter: LoginInteractorInjection {
-    
+extension LoginRouter: LoginRouterInjection {
+    static func setup() -> LoginViewInjection? {
+        return Bundle.main.loadNibNamed(LoginViewController.nibName, owner: nil, options: nil)?[0] as? LoginViewInjection
+    }
 }

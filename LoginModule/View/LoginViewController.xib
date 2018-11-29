@@ -12,14 +12,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="YXl-Ba-nrq" customClass="LoginViewController" customModule="LoginModule" customModuleProvider="target">
+        <viewController nibName="LoginViewController" id="YXl-Ba-nrq" customClass="LoginViewController" customModule="LoginModule" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="GVE-Vv-HyJ">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Mr-tO-crI">
+                        <rect key="frame" x="75" y="145" width="225" height="22"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qh0-wT-SSd">
+                        <rect key="frame" x="75" y="197" width="225" height="22"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxb-V4-DBy">
+                        <rect key="frame" x="25" y="369" width="325" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="Qh0-wT-SSd" secondAttribute="trailing" constant="75" id="422-sn-FG7"/>
+                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="Wxb-V4-DBy" secondAttribute="trailing" constant="25" id="54s-en-Vqq"/>
+                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="75" id="CCa-EI-ZZd"/>
+                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="top" secondItem="1Mr-tO-crI" secondAttribute="bottom" constant="30" id="IO4-JP-UWV"/>
+                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="25" id="J2f-Hd-VJF"/>
+                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="1Mr-tO-crI" secondAttribute="trailing" constant="75" id="SLz-US-7vR"/>
+                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="top" secondItem="Qh0-wT-SSd" secondAttribute="bottom" constant="150" id="ZiY-DT-xvj"/>
+                    <constraint firstItem="1Mr-tO-crI" firstAttribute="centerX" secondItem="GVE-Vv-HyJ" secondAttribute="centerX" id="d1I-Nu-Vrs"/>
+                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="centerX" secondItem="1Mr-tO-crI" secondAttribute="centerX" id="jhw-8t-acx"/>
+                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="centerX" secondItem="GVE-Vv-HyJ" secondAttribute="centerX" id="tGH-qZ-XFY"/>
+                    <constraint firstItem="1Mr-tO-crI" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="75" id="ub0-88-Ij9"/>
+                    <constraint firstItem="1Mr-tO-crI" firstAttribute="top" secondItem="lxN-3H-tL0" secondAttribute="top" constant="125" id="zbu-ns-N6w"/>
+                </constraints>
                 <viewLayoutGuide key="safeArea" id="lxN-3H-tL0"/>
             </view>
-            <point key="canvasLocation" x="279" y="-164"/>
+            <connections>
+                <outlet property="bottomLabel" destination="Wxb-V4-DBy" id="Wyp-Tw-ly7"/>
+                <outlet property="leadingTextField" destination="1Mr-tO-crI" id="yO4-MX-bh1"/>
+                <outlet property="trailingTextField" destination="Qh0-wT-SSd" id="TlT-Z2-ZO3"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="-188"/>
         </viewController>
     </objects>
 </document>
