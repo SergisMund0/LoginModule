@@ -12,6 +12,6 @@ final class LoginInteractor {
     
 }
 
-extension LoginInteractorInjection {
+extension LoginInteractor: LoginInteractorInjection {
     
 }

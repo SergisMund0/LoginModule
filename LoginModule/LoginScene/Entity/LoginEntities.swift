@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct LoginViewModel {
+    let leadingString: String?
+    let trailingString: String?
+    let bottomState: BottomState
+}
+
+enum BottomState {
+    case createUser
+    case signIn
+}

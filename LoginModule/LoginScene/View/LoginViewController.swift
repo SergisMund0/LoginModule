@@ -14,8 +14,6 @@ final class LoginViewController: UIViewController {
     
     // Private properties
     static let nibName = "LoginViewController"
-    private(set) var loginViewModel: LoginViewModel?
-    
     @IBOutlet weak private var leadingTextField: UITextField!
     @IBOutlet weak private var trailingTextField: UITextField!
     @IBOutlet weak private var bottomLabel: UILabel!
@@ -34,6 +32,7 @@ final class LoginViewController: UIViewController {
     
     // Actions
     @objc func bottomLabelDidPress() {
+        let loginViewModel = LoginViewModel(leadingString: leadingTextField.text, trailingString: trailingTextField.text, bottomState: .createUser)
         presenter?.viewDidSendUpdates(loginViewModel: loginViewModel)
     }
 }
@@ -42,6 +41,6 @@ extension LoginViewController: LoginViewInjection {
     func viewDidReceiveUpdates(loginViewModel: LoginViewModel) {
         leadingTextField.text = loginViewModel.leadingString
         trailingTextField.text = loginViewModel.trailingString
-        bottomLabel.text = loginViewModel.bottomString
+        bottomLabel.text = ""
     }
 }

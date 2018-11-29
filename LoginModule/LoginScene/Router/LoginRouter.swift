@@ -14,6 +14,10 @@ final class LoginRouter {
 
 extension LoginRouter: LoginRouterInjection {
     static func setup() -> LoginViewInjection? {
-        return Bundle.main.loadNibNamed(LoginViewController.nibName, owner: nil, options: nil)?[0] as? LoginViewInjection
+        var loginViewInjection = Bundle.main.loadNibNamed(LoginViewController.nibName, owner: nil, options: nil)?[0] as? LoginViewInjection
+        let presenter: LoginViewDelegate = LoginPresenter()
+        loginViewInjection?.presenter = presenter
+        
+        return loginViewInjection
     }
 }

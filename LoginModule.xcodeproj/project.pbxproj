@@ -23,11 +23,11 @@
 		EB07BF5B21A8156200958158 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07BF5A21A8156200958158 /* LoginRouter.swift */; };
 		EB07BF5D21A8167F00958158 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB07BF5C21A8167F00958158 /* LoginViewController.xib */; };
 		EB74111721ABFE5F0033A6F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB74111621ABFE5F0033A6F3 /* GoogleService-Info.plist */; };
-		EB7C2C5D21AD909300CB9B70 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C2C5C21AD909300CB9B70 /* LoginViewModel.swift */; };
 		EB7C2C5F21AD96DB00CB9B70 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C2C5E21AD96DB00CB9B70 /* LoginModel.swift */; };
 		EBA0CE1621A847460090BB83 /* FirebaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1521A847460090BB83 /* FirebaseInteractor.swift */; };
 		EBA0CE1821A847530090BB83 /* FirebaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1721A847530090BB83 /* FirebaseRouter.swift */; };
 		EBA0CE1A21A847620090BB83 /* FirebaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */; };
+		EBC74AFE21B03EF500D0D33A /* FirebaseErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC74AFD21B03EF500D0D33A /* FirebaseErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +65,11 @@
 		EB07BF5A21A8156200958158 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		EB07BF5C21A8167F00958158 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		EB74111621ABFE5F0033A6F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EB7C2C5C21AD909300CB9B70 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		EB7C2C5E21AD96DB00CB9B70 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		EBA0CE1521A847460090BB83 /* FirebaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseInteractor.swift; sourceTree = "<group>"; };
 		EBA0CE1721A847530090BB83 /* FirebaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRouter.swift; sourceTree = "<group>"; };
 		EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProtocols.swift; sourceTree = "<group>"; };
+		EBC74AFD21B03EF500D0D33A /* FirebaseErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +219,6 @@
 		EBA0CE1221A847330090BB83 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				EB7C2C5C21AD909300CB9B70 /* LoginViewModel.swift */,
 				EB7C2C5E21AD96DB00CB9B70 /* LoginModel.swift */,
 			);
 			path = Entity;
@@ -229,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				EBA0CE1521A847460090BB83 /* FirebaseInteractor.swift */,
+				EBC74AFD21B03EF500D0D33A /* FirebaseErrorHandler.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -448,12 +448,12 @@
 				EB07BF2E21A7037600958158 /* ViewController.swift in Sources */,
 				EB07BF5921A8155600958158 /* LoginEntities.swift in Sources */,
 				EB07BF5721A8154800958158 /* LoginInteractor.swift in Sources */,
+				EBC74AFE21B03EF500D0D33A /* FirebaseErrorHandler.swift in Sources */,
 				EBA0CE1A21A847620090BB83 /* FirebaseProtocols.swift in Sources */,
 				EB07BF5321A8152800958158 /* LoginViewController.swift in Sources */,
 				EB07BF2C21A7037600958158 /* AppDelegate.swift in Sources */,
 				EB07BF5B21A8156200958158 /* LoginRouter.swift in Sources */,
 				EB7C2C5F21AD96DB00CB9B70 /* LoginModel.swift in Sources */,
-				EB7C2C5D21AD909300CB9B70 /* LoginViewModel.swift in Sources */,
 				EBA0CE1821A847530090BB83 /* FirebaseRouter.swift in Sources */,
 				EB07BF5521A8153800958158 /* LoginPresenter.swift in Sources */,
 				EBA0CE1621A847460090BB83 /* FirebaseInteractor.swift in Sources */,

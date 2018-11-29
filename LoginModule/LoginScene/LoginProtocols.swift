@@ -9,15 +9,16 @@
 import Foundation
 
 protocol LoginViewInjection {
+    var presenter: LoginViewDelegate? { get set }
     func viewDidReceiveUpdates(loginViewModel: LoginViewModel)
 }
 
 protocol LoginViewDelegate {
-    func viewDidSendUpdates(loginViewModel: LoginViewModel?)
+    func viewDidSendUpdates(loginViewModel: LoginViewModel)
 }
 
 protocol LoginPresenterInjection {
-    
+    var interactor: LoginInteractorInjection? { get set }
 }
 
 protocol LoginPresenterDelegate {

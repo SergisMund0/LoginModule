@@ -22,7 +22,11 @@ final class FirebaseInteractor {
 extension FirebaseInteractor: FirebaseInteractorInjection {
     func createUser(userModel: UserModel) {
         Auth.auth().createUser(withEmail: userModel.email, password: userModel.password) { (authResult, error) in
-            //guard let user = authResult?.user else { return }
+            if (error as NSError?) != nil {
+                
+            }
+            
+            guard let user = authResult?.user else { return }
         }
     }
     
