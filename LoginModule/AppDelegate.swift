@@ -16,8 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Firebase
+        // Setup firebase
         let _ = FirebaseRouter.setup()
+        
+        // Setup first application's scene
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let firstViewController = LoginRouter.setup()
+        window?.rootViewController = firstViewController as? UIViewController
+        window?.makeKeyAndVisible()
         
         return true
     }
