@@ -13,7 +13,7 @@ final class LoginPresenter {
     var interactor: LoginInteractorInjection?
     
     // Private properties
-    private let firebaseInteractor = FirebaseRouter.setup()
+    private var firebaseInteractor = FirebaseRouter.setup()
 }
 
 extension LoginPresenter: LoginViewDelegate {
@@ -30,7 +30,14 @@ extension LoginPresenter: LoginViewDelegate {
             return
         }
         
+        firebaseInteractor.routerDelegate = self
         let userModel = UserModel(email: leadingString, password: trailingString)
         firebaseInteractor.createUser(userModel: userModel)
+    }
+}
+
+extension LoginPresenter: FirebaseRouterDelegate {
+    func sceneDidFinish(error: ErrorViewModel) {
+        print("I'm here!")
     }
 }
