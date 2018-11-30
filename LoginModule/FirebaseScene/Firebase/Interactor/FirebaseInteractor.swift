@@ -10,7 +10,11 @@ import Foundation
 import Firebase
 
 final class FirebaseInteractor {
+    // Public properties
     static let shared = FirebaseInteractor()
+    var routerDelegate: FirebaseRouterDelegate?
+    
+    // Private properties
     private let firebaseReference: DatabaseReference!
     
     private init() {
@@ -22,8 +26,8 @@ final class FirebaseInteractor {
 extension FirebaseInteractor: FirebaseInteractorInjection {
     func createUser(userModel: UserModel) {
         Auth.auth().createUser(withEmail: userModel.email, password: userModel.password) { (authResult, error) in
-            if (error as NSError?) != nil {
-                
+            if let error = error as NSError? {
+                self.processFirebaseErrorCode(error)
             }
             
             guard let user = authResult?.user else { return }
@@ -32,6 +36,10 @@ extension FirebaseInteractor: FirebaseInteractorInjection {
     
     func signIn(userModel: UserModel) {
         Auth.auth().signIn(withEmail: userModel.email, password: userModel.password) { user, error in
+            if let error = error as NSError? {
+                self.processFirebaseErrorCode(error)
+            }
+            
             
         }
     }
@@ -39,8 +47,13 @@ extension FirebaseInteractor: FirebaseInteractorInjection {
     func signOut() {
         do {
             try Auth.auth().signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+        } catch let error as NSError {
+            self.processFirebaseErrorCode(error)
         }
+    }
+    
+    func processFirebaseErrorCode(_ error: NSError) {
+        let errorViewModel = ErrorViewModel(titleString: error.localizedDescription)
+        routerDelegate?.sceneDidFinish(error: errorViewModel)
     }
 }
