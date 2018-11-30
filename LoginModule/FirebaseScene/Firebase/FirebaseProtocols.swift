@@ -9,6 +9,8 @@
 import Foundation
 
 protocol FirebaseInteractorInjection {
+    var routerDelegate: FirebaseRouterDelegate? { get set }
+    
     func createUser(userModel: UserModel)
     func signIn(userModel: UserModel)
     func signOut()
@@ -23,5 +25,5 @@ protocol FirebaseRouterInjection {
 }
 
 protocol FirebaseRouterDelegate {
-    
+    func sceneDidFinish(error: ErrorViewModel)
 }
