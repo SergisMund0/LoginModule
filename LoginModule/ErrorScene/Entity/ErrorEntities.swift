@@ -12,7 +12,7 @@ struct ErrorViewModel {
     let titleString: String
     let bottomButtonString: String
     
-    init(titleString: String, bottomButtonString: String = "Back") {
+    init(titleString: String, bottomButtonString: String = "Retry") {
         self.titleString = titleString
         self.bottomButtonString = bottomButtonString
     }
