@@ -15,6 +15,10 @@ final class ErrorRouter {
 extension ErrorRouter: ErrorRouterInjection {
     static func setup(errorViewModel: ErrorViewModel) -> ErrorViewInjection? {
         var errorViewInjection = Bundle.main.loadNibNamed(ErrorViewController.nibName, owner: nil, options: nil)?[0] as? ErrorViewInjection
+        var presenter: ErrorPresenterInjection & ErrorViewDelegate = ErrorPresenter()
+        errorViewInjection?.presenter = presenter
+        presenter.view = errorViewInjection
+        
         errorViewInjection?.viewDidReceiveUpdates(errorViewModel: errorViewModel)
         
         return errorViewInjection

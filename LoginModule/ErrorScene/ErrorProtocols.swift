@@ -14,10 +14,11 @@ protocol ErrorViewInjection {
 }
 
 protocol ErrorViewDelegate {
-    func viewDidSendUpdates(ErrorViewModel: ErrorViewModel)
+    func viewDidSendUpdates(errorViewModel: ErrorViewModel)
 }
 
 protocol ErrorPresenterInjection {
+    var view: ErrorViewInjection? { get set }
     var interactor: ErrorInteractorInjection? { get set }
 }
 

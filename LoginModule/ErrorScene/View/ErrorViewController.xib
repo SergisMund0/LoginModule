@@ -26,6 +26,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2f-6L-uYd">
                         <rect key="frame" x="164.5" y="439" width="46" height="30"/>
                         <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="bottomButtonDidPress:" destination="Dx7-J9-n9M" eventType="touchUpInside" id="ggb-2g-u7e"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

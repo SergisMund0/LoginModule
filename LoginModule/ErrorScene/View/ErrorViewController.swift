@@ -21,6 +21,11 @@ final class ErrorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func bottomButtonDidPress(_ sender: Any) {
+        let errorViewModel = ErrorViewModel(titleString: "")
+        presenter?.viewDidSendUpdates(errorViewModel: errorViewModel)
+    }
 }
 
 extension ErrorViewController: ErrorViewInjection {
