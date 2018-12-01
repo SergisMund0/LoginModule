@@ -18,6 +18,7 @@ protocol LoginViewDelegate {
 }
 
 protocol LoginPresenterInjection {
+    var view: LoginViewInjection? { get set }
     var interactor: LoginInteractorInjection? { get set }
 }
 

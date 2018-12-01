@@ -8,13 +8,16 @@
 
 import Foundation
 
-final class LoginPresenter {
+final class LoginPresenter: LoginPresenterInjection {
     // Public properties
+    var view: LoginViewInjection?
     var interactor: LoginInteractorInjection?
     
     // Private properties
     private var firebaseInteractor = FirebaseRouter.setup()
 }
+
+
 
 extension LoginPresenter: LoginViewDelegate {
     func viewDidSendUpdates(loginViewModel: LoginViewModel) {
@@ -38,6 +41,9 @@ extension LoginPresenter: LoginViewDelegate {
 
 extension LoginPresenter: FirebaseRouterDelegate {
     func sceneDidFinish(error: ErrorViewModel) {
-        print("I'm here!")
+        guard let errorViewController = (ErrorRouter.setup(errorViewModel: error) as? ErrorViewController),
+            let loginViewController = view as? LoginViewController else { return }
+    
+        loginViewController.present(errorViewController, animated: true, completion: nil)
     }
 }
