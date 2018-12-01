@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,48 +14,69 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <viewController nibName="LoginViewController" id="YXl-Ba-nrq" customClass="LoginViewController" customModule="LoginModule" customModuleProvider="target">
             <view key="view" contentMode="scaleToFill" id="GVE-Vv-HyJ">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Module" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hne-ro-cqh">
+                        <rect key="frame" x="85" y="70" width="244" height="30.666666666666671"/>
+                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="e-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Mr-tO-crI">
-                        <rect key="frame" x="75" y="145" width="225" height="22"/>
+                        <rect key="frame" x="107" y="155.66666666666666" width="200" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="aW2-ER-kOj"/>
+                        </constraints>
                         <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qh0-wT-SSd">
-                        <rect key="frame" x="75" y="197" width="225" height="22"/>
+                        <rect key="frame" x="107" y="202.66666666666666" width="200" height="22"/>
                         <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="16"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I don't have an account yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxb-V4-DBy">
-                        <rect key="frame" x="25" y="369" width="325" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="35" y="688" width="344" height="23"/>
+                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="20"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaV-DB-JAm">
+                        <rect key="frame" x="167" y="299.66666666666669" width="80" height="36"/>
+                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
+                        <state key="normal" title="sign in">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="Qh0-wT-SSd" secondAttribute="trailing" constant="75" id="422-sn-FG7"/>
-                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="Wxb-V4-DBy" secondAttribute="trailing" constant="25" id="54s-en-Vqq"/>
-                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="75" id="CCa-EI-ZZd"/>
-                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="top" secondItem="1Mr-tO-crI" secondAttribute="bottom" constant="30" id="IO4-JP-UWV"/>
-                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="25" id="J2f-Hd-VJF"/>
-                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="1Mr-tO-crI" secondAttribute="trailing" constant="75" id="SLz-US-7vR"/>
-                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="top" secondItem="Qh0-wT-SSd" secondAttribute="bottom" constant="150" id="ZiY-DT-xvj"/>
-                    <constraint firstItem="1Mr-tO-crI" firstAttribute="centerX" secondItem="GVE-Vv-HyJ" secondAttribute="centerX" id="d1I-Nu-Vrs"/>
-                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="centerX" secondItem="1Mr-tO-crI" secondAttribute="centerX" id="jhw-8t-acx"/>
-                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="centerX" secondItem="GVE-Vv-HyJ" secondAttribute="centerX" id="tGH-qZ-XFY"/>
-                    <constraint firstItem="1Mr-tO-crI" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="75" id="ub0-88-Ij9"/>
-                    <constraint firstItem="1Mr-tO-crI" firstAttribute="top" secondItem="lxN-3H-tL0" secondAttribute="top" constant="125" id="zbu-ns-N6w"/>
+                    <constraint firstItem="Hne-ro-cqh" firstAttribute="top" secondItem="lxN-3H-tL0" secondAttribute="top" constant="50" id="0kv-JP-2ma"/>
+                    <constraint firstItem="lxN-3H-tL0" firstAttribute="bottom" secondItem="Wxb-V4-DBy" secondAttribute="bottom" constant="25" id="3Sm-mt-U38"/>
+                    <constraint firstItem="uaV-DB-JAm" firstAttribute="centerX" secondItem="Hne-ro-cqh" secondAttribute="centerX" id="6wA-L1-VFn"/>
+                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="leading" secondItem="1Mr-tO-crI" secondAttribute="leading" id="7dr-yp-sgO"/>
+                    <constraint firstItem="1Mr-tO-crI" firstAttribute="centerX" secondItem="Hne-ro-cqh" secondAttribute="centerX" id="AGx-Ip-nIl"/>
+                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="centerX" secondItem="Hne-ro-cqh" secondAttribute="centerX" id="Dk1-G5-gi3"/>
+                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Hne-ro-cqh" secondAttribute="trailing" constant="85" id="Dxh-ve-4Hv"/>
+                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="trailing" secondItem="1Mr-tO-crI" secondAttribute="trailing" id="G5q-Hq-YUu"/>
+                    <constraint firstItem="Hne-ro-cqh" firstAttribute="centerX" secondItem="GVE-Vv-HyJ" secondAttribute="centerX" id="Mhw-4y-y5R"/>
+                    <constraint firstItem="uaV-DB-JAm" firstAttribute="top" secondItem="Qh0-wT-SSd" secondAttribute="bottom" constant="75" id="NOV-9z-zen"/>
+                    <constraint firstItem="lxN-3H-tL0" firstAttribute="trailing" secondItem="Wxb-V4-DBy" secondAttribute="trailing" constant="35" id="Qhg-Hb-dgI"/>
+                    <constraint firstItem="1Mr-tO-crI" firstAttribute="top" secondItem="Hne-ro-cqh" secondAttribute="bottom" constant="55" id="YIV-cT-a1P"/>
+                    <constraint firstItem="Hne-ro-cqh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="85" id="fNG-fw-2gl"/>
+                    <constraint firstItem="Wxb-V4-DBy" firstAttribute="leading" secondItem="lxN-3H-tL0" secondAttribute="leading" constant="35" id="xVC-FL-Fnr"/>
+                    <constraint firstItem="Qh0-wT-SSd" firstAttribute="top" secondItem="1Mr-tO-crI" secondAttribute="bottom" constant="25" id="yvO-7Q-Pkn"/>
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="lxN-3H-tL0"/>
             </view>
             <connections>
+                <outlet property="actionButton" destination="uaV-DB-JAm" id="nv5-I3-URe"/>
                 <outlet property="bottomLabel" destination="Wxb-V4-DBy" id="Wyp-Tw-ly7"/>
                 <outlet property="leadingTextField" destination="1Mr-tO-crI" id="yO4-MX-bh1"/>
+                <outlet property="titleLabel" destination="Hne-ro-cqh" id="ZrG-gu-Yd0"/>
                 <outlet property="trailingTextField" destination="Qh0-wT-SSd" id="TlT-Z2-ZO3"/>
             </connections>
             <point key="canvasLocation" x="330" y="-188"/>

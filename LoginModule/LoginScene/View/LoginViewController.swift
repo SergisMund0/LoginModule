@@ -9,16 +9,19 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-    // Public properties
+    // MARK: - Public properties
     var presenter: LoginViewDelegate?
     
-    // Private properties
+    // MARK: - Private properties
     static let nibName = "LoginViewController"
+    
+    @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var leadingTextField: UITextField!
     @IBOutlet weak private var trailingTextField: UITextField!
+    @IBOutlet weak private var actionButton: UIButton!
     @IBOutlet weak private var bottomLabel: UILabel!
     
-    // UIViewController setup
+    // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviewActions()
@@ -30,17 +33,21 @@ final class LoginViewController: UIViewController {
         bottomLabel.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    // Actions
+    // MARK: - Actions
     @objc func bottomLabelDidPress() {
-        let loginViewModel = LoginViewModel(leadingString: leadingTextField.text, trailingString: trailingTextField.text, bottomState: .createUser)
-        presenter?.viewDidSendUpdates(loginViewModel: loginViewModel)
+        guard let loginViewDelegateModel = LoginViewDelegateModel(leadingText: leadingTextField.text, trailingText: trailingTextField.text, actionButtonTitle: actionButton.titleLabel?.text) else { return }
+        
+        presenter?.viewDidSendUpdates(loginViewDelegateModel)
     }
 }
 
+// MARK: - LoginViewInjection
 extension LoginViewController: LoginViewInjection {
-    func viewDidReceiveUpdates(loginViewModel: LoginViewModel) {
-        leadingTextField.text = loginViewModel.leadingString
-        trailingTextField.text = loginViewModel.trailingString
-        bottomLabel.text = ""
+    func viewDidReceiveUpdates(loginViewInjectionModel: LoginViewInjectionModel) {
+        titleLabel.text = loginViewInjectionModel.title
+        leadingTextField.placeholder = loginViewInjectionModel.leadingPlaceholder
+        trailingTextField.placeholder = loginViewInjectionModel.trailingPlaceholder
+        actionButton.setTitle(loginViewInjectionModel.actionButtonTitle, for: .normal)
+        bottomLabel.text = loginViewInjectionModel.bottomTitle
     }
 }
