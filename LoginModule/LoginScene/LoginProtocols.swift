@@ -30,7 +30,8 @@ protocol LoginPresenterDelegate {
 protocol LoginInteractorInjection {
     // Firebase handles the badly formatted information introduced by the user. This functions just adds
     // an additional layer in order to check the requirements before the call
-    func validate(email: String?, password: String?) -> (isEmailValid: RequirementState, isPasswordValid: RequirementState) 
+    func validate(email: String?, password: String?) -> (isEmailValid: RequirementState, isPasswordValid: RequirementState)
+    func getErrorDescription(emailState: RequirementState, passwordState: RequirementState) -> String? 
 }
 
 protocol LoginRouterInjection {

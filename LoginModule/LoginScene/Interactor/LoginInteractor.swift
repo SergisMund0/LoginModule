@@ -21,6 +21,36 @@ extension LoginInteractor: LoginInteractorInjection {
         return (isEmailValid: validateEmail(email), isPasswordValid: validatePassword(password))
     }
     
+    func getErrorDescription(emailState: RequirementState, passwordState: RequirementState) -> String? {
+        var errorDescription: String?
+        
+        if emailState == .empty {
+            errorDescription = LoginResources.emailEmpty
+        }
+        
+        if passwordState == .empty {
+            errorDescription = LoginResources.passwordEmpty
+        }
+        
+        if emailState == .empty && passwordState == .empty {
+            errorDescription = LoginResources.emailAndPasswordEmpty
+        }
+        
+        if emailState == .invalid {
+            errorDescription = LoginResources.emailNotValid
+        }
+        
+        if passwordState == .invalid {
+            errorDescription = LoginResources.passwordNotValid
+        }
+        
+        if emailState == .invalid && passwordState == .invalid {
+            errorDescription = LoginResources.emailAndPasswordNotValid
+        }
+        
+        return errorDescription
+    }
+    
     private func validatePassword(_ password: String?) -> RequirementState {
         guard let password = password, password != "" else { return .empty }
         

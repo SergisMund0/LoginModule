@@ -57,7 +57,7 @@ extension LoginPresenter {
         guard let interactor = interactor else { return false }
         
         let validation = interactor.validate(email: email, password: password)
-        let errorDescription = getErrorDescription(emailState: validation.isEmailValid, passwordState: validation.isPasswordValid)
+        let errorDescription = interactor.getErrorDescription(emailState: validation.isEmailValid, passwordState: validation.isPasswordValid)
         
         // Invoke error scene if necessary
         if let errorDescription = errorDescription {
@@ -65,36 +65,6 @@ extension LoginPresenter {
         }
 
         return validation.isEmailValid == .valid && validation.isPasswordValid == .valid
-    }
-    
-    private func getErrorDescription(emailState: RequirementState, passwordState: RequirementState) -> String? {
-        var errorDescription: String?
-
-        if emailState == .empty {
-            errorDescription = LoginResources.emailEmpty
-        }
-        
-        if passwordState == .empty {
-            errorDescription = LoginResources.passwordEmpty
-        }
-        
-        if emailState == .empty && passwordState == .empty {
-            errorDescription = LoginResources.emailAndPasswordEmpty
-        }
-        
-        if emailState == .invalid {
-            errorDescription = LoginResources.emailNotValid
-        }
-        
-        if passwordState == .invalid {
-            errorDescription = LoginResources.passwordNotValid
-        }
-        
-        if emailState == .invalid && passwordState == .invalid {
-            errorDescription = LoginResources.emailAndPasswordNotValid
-        }
-        
-        return errorDescription
     }
     
     private func createUser(email: String?, password: String?) {
