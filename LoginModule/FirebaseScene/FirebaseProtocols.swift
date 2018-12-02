@@ -16,10 +16,6 @@ protocol FirebaseInteractorInjection {
     func signOut()
 }
 
-protocol FirebaseInteractorDelegate {
-    
-}
-
 protocol FirebaseRouterInjection {
     static func setup() -> FirebaseInteractorInjection
 }

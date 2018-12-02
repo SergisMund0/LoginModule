@@ -10,11 +10,11 @@ import Foundation
 import Firebase
 
 final class FirebaseInteractor {
-    // Public properties
+    // MARK: - Public properties
     static let shared = FirebaseInteractor()
     var routerDelegate: FirebaseRouterDelegate?
     
-    // Private properties
+    // MARK: - Private properties
     private let firebaseReference: DatabaseReference!
     
     private init() {
@@ -23,6 +23,7 @@ final class FirebaseInteractor {
     }
 }
 
+// MARK: - FirebaseInteractorInjection
 extension FirebaseInteractor: FirebaseInteractorInjection {
     func createUser(userModel: UserModel) {
         Auth.auth().createUser(withEmail: userModel.email, password: userModel.password) { (authResult, error) in
