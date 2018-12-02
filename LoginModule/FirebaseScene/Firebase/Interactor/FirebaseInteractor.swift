@@ -29,8 +29,6 @@ extension FirebaseInteractor: FirebaseInteractorInjection {
             if let error = error as NSError? {
                 self.processFirebaseErrorCode(error)
             }
-            
-            guard let user = authResult?.user else { return }
         }
     }
     
@@ -39,8 +37,6 @@ extension FirebaseInteractor: FirebaseInteractorInjection {
             if let error = error as NSError? {
                 self.processFirebaseErrorCode(error)
             }
-            
-            
         }
     }
     
