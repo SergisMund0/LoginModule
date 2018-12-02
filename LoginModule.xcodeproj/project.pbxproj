@@ -220,17 +220,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EBA0CE1121A846F70090BB83 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */,
-				EBA0CE1221A847330090BB83 /* Entity */,
-				EBA0CE1321A847330090BB83 /* Interactor */,
-				EBA0CE1421A847330090BB83 /* Router */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
 		EBA0CE1221A847330090BB83 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,8 +269,11 @@
 		EBC74AFA21B0239200D0D33A /* FirebaseScene */ = {
 			isa = PBXGroup;
 			children = (
+				EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */,
+				EBA0CE1321A847330090BB83 /* Interactor */,
+				EBA0CE1221A847330090BB83 /* Entity */,
+				EBA0CE1421A847330090BB83 /* Router */,
 				EB74111521ABFE5F0033A6F3 /* Resources */,
-				EBA0CE1121A846F70090BB83 /* Firebase */,
 			);
 			path = FirebaseScene;
 			sourceTree = "<group>";
