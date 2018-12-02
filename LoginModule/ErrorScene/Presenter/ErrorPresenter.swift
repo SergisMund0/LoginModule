@@ -9,14 +9,11 @@
 import Foundation
 
 final class ErrorPresenter {
+    // MARK: - Public properties
     var view: ErrorViewInjection?
-    var interactor: ErrorInteractorInjection?
 }
 
-extension ErrorPresenter: ErrorPresenterInjection {
-    
-}
-
+// MARK: - ErrorViewDelegate
 extension ErrorPresenter: ErrorViewDelegate {
     func viewDidSendUpdates(errorViewModel: ErrorViewModel) {
         guard let errorViewController = view as? ErrorViewController else { return }

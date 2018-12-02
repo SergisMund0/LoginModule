@@ -29,7 +29,6 @@
 		EBA0CE1A21A847620090BB83 /* FirebaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */; };
 		EBC74B0621B0594400D0D33A /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC74B0521B0594400D0D33A /* ErrorViewController.swift */; };
 		EBC74B0821B0595100D0D33A /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC74B0721B0595100D0D33A /* ErrorPresenter.swift */; };
-		EBC74B0A21B0595C00D0D33A /* ErrorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC74B0921B0595C00D0D33A /* ErrorInteractor.swift */; };
 		EBC74B0C21B0597200D0D33A /* ErrorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC74B0B21B0597200D0D33A /* ErrorRouter.swift */; };
 		EBC74B0E21B059B400D0D33A /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC74B0D21B059B400D0D33A /* ErrorViewController.xib */; };
 		EBC74B1021B05B4300D0D33A /* ErrorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC74B0F21B05B4300D0D33A /* ErrorProtocols.swift */; };
@@ -78,7 +77,6 @@
 		EBA0CE1921A847620090BB83 /* FirebaseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProtocols.swift; sourceTree = "<group>"; };
 		EBC74B0521B0594400D0D33A /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		EBC74B0721B0595100D0D33A /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
-		EBC74B0921B0595C00D0D33A /* ErrorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInteractor.swift; sourceTree = "<group>"; };
 		EBC74B0B21B0597200D0D33A /* ErrorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRouter.swift; sourceTree = "<group>"; };
 		EBC74B0D21B059B400D0D33A /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
 		EBC74B0F21B05B4300D0D33A /* ErrorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorProtocols.swift; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 				EBC74B0F21B05B4300D0D33A /* ErrorProtocols.swift */,
 				EBC74B0421B0590C00D0D33A /* View */,
 				EBC74B0321B0590200D0D33A /* Presenter */,
-				EBC74B0121B058D400D0D33A /* Interactor */,
 				EBC74B0221B058DC00D0D33A /* Entity */,
 				EBC74B0021B058CD00D0D33A /* Router */,
 			);
@@ -297,14 +294,6 @@
 				EBC74B0B21B0597200D0D33A /* ErrorRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		EBC74B0121B058D400D0D33A /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				EBC74B0921B0595C00D0D33A /* ErrorInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EBC74B0221B058DC00D0D33A /* Entity */ = {
@@ -528,7 +517,6 @@
 				EBC74B1221B05BD300D0D33A /* ErrorEntities.swift in Sources */,
 				EB07BF5921A8155600958158 /* LoginEntities.swift in Sources */,
 				EB07BF5721A8154800958158 /* LoginInteractor.swift in Sources */,
-				EBC74B0A21B0595C00D0D33A /* ErrorInteractor.swift in Sources */,
 				EBA0CE1A21A847620090BB83 /* FirebaseProtocols.swift in Sources */,
 				EBC74B1021B05B4300D0D33A /* ErrorProtocols.swift in Sources */,
 				EB07BF5321A8152800958158 /* LoginViewController.swift in Sources */,

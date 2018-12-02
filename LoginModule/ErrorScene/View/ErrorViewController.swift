@@ -9,25 +9,23 @@
 import UIKit
 
 final class ErrorViewController: UIViewController {
-    // Public properties
+    // MARK: - Public properties
     var presenter: ErrorViewDelegate?
     
-    // Private properties
+    // MARK: - Private properties
     static let nibName = "ErrorViewController"
+    
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var bottomButton: UIButton!
     
-    // UIViewController setup
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    // MARK: - Actions
     @IBAction func bottomButtonDidPress(_ sender: Any) {
         let errorViewModel = ErrorViewModel(titleString: "")
         presenter?.viewDidSendUpdates(errorViewModel: errorViewModel)
     }
 }
 
+// MARK: - ErrorViewInjection
 extension ErrorViewController: ErrorViewInjection {
     func viewDidReceiveUpdates(errorViewModel: ErrorViewModel) {
         titleLabel.text = errorViewModel.titleString
