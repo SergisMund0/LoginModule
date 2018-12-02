@@ -36,8 +36,16 @@ extension LoginPresenter: LoginViewDelegate {
             createUser(email: loginViewDelegateModel.leadingText, password: loginViewDelegateModel.trailingText)
         case .signIn:
             signIn(email: loginViewDelegateModel.leadingText, password: loginViewDelegateModel.trailingText)
-        case .signOut:
-            signOut()
+        }
+    }
+    
+    func viewDidChangeState(_ loginViewDelegateModel: LoginViewDelegateModel) {
+        if loginViewDelegateModel.bottomState == .createUser {
+            let loginViewInjectionModel = LoginViewInjectionModel(actionButtonTitle: LoginResources.actionButtonSigninTitle)
+            view?.viewDidReceiveUpdates(loginViewInjectionModel: loginViewInjectionModel)
+        } else {
+            let loginViewInjectionModel = LoginViewInjectionModel(actionButtonTitle: LoginResources.actionButtonCreateUserTitle)
+            view?.viewDidReceiveUpdates(loginViewInjectionModel: loginViewInjectionModel)
         }
     }
 }
@@ -79,10 +87,6 @@ extension LoginPresenter {
             let userModel = UserModel(email: email, password: password)
             firebaseInteractor.signIn(userModel: userModel)
         }
-    }
-    
-    private func signOut() {
-        firebaseInteractor.signOut()
     }
     
     private func presentErrorScene(errorDescription: String) {

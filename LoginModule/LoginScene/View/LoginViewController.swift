@@ -34,10 +34,16 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @objc func bottomLabelDidPress() {
+    @IBAction func actionButtonDidPress(_ sender: Any) {
         guard let loginViewDelegateModel = LoginViewDelegateModel(leadingText: leadingTextField.text, trailingText: trailingTextField.text, actionButtonTitle: actionButton.titleLabel?.text) else { return }
         
         presenter?.viewDidSendUpdates(loginViewDelegateModel)
+    }
+    
+    @objc func bottomLabelDidPress() {
+        guard let loginViewDelegateModel = LoginViewDelegateModel(leadingText: leadingTextField.text, trailingText: trailingTextField.text, actionButtonTitle: actionButton.titleLabel?.text) else { return }
+        
+        presenter?.viewDidChangeState(loginViewDelegateModel)
     }
 }
 

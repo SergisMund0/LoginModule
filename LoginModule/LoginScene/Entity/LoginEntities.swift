@@ -60,10 +60,8 @@ struct LoginViewDelegateModel {
         if let actionButtonTitle = actionButtonTitle {
             if actionButtonTitle == LoginResources.actionButtonCreateUserTitle {
                 bottomState = .createUser
-            } else if actionButtonTitle == LoginResources.actionButtonSigninTitle {
-                bottomState = .signIn
             } else {
-                bottomState = .signOut
+                bottomState = .signIn
             }
         } else {
             return nil
@@ -75,7 +73,6 @@ struct LoginViewDelegateModel {
 enum BottomState {
     case createUser
     case signIn
-    case signOut
 }
 
 enum RequirementState {
