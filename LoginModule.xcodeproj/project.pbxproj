@@ -147,9 +147,9 @@
 		EB07BF2A21A7037600958158 /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
+				EBC74AF921B0236600D0D33A /* LoginScene */,
 				EBC74AFF21B058A200D0D33A /* ErrorScene */,
 				EBC74AFA21B0239200D0D33A /* FirebaseScene */,
-				EBC74AF921B0236600D0D33A /* LoginScene */,
 				EB07BF2B21A7037600958158 /* AppDelegate.swift */,
 				EB07BF2F21A7037600958158 /* Main.storyboard */,
 				EB07BF3221A7037800958158 /* Assets.xcassets */,
