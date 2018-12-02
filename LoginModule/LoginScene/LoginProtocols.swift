@@ -16,6 +16,7 @@ protocol LoginViewInjection {
 
 protocol LoginViewDelegate {
     func viewDidSendUpdates(_ loginViewDelegateModel: LoginViewDelegateModel)
+    func viewDidChangeState(_ loginViewDelegateModel: LoginViewDelegateModel)
 }
 
 protocol LoginPresenterInjection {
