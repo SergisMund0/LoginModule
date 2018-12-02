@@ -14,21 +14,22 @@ final class ErrorViewController: UIViewController {
     
     // MARK: - Private properties
     static let nibName = "ErrorViewController"
-    
-    @IBOutlet weak private var titleLabel: UILabel!
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak private var bottomButton: UIButton!
     
     // MARK: - Actions
     @IBAction func bottomButtonDidPress(_ sender: Any) {
-        let errorViewModel = ErrorViewModel(titleString: "")
-        presenter?.viewDidSendUpdates(errorViewModel: errorViewModel)
+        presenter?.bottomButtonDidPress()
     }
 }
 
 // MARK: - ErrorViewInjection
 extension ErrorViewController: ErrorViewInjection {
-    func viewDidReceiveUpdates(errorViewModel: ErrorViewModel) {
-        titleLabel.text = errorViewModel.titleString
-        bottomButton.titleLabel?.text = errorViewModel.bottomButtonString 
+    func viewDidReceiveUpdates(errorViewModel: ErrorViewInjectionModel) {
+        titleLabel.text = errorViewModel.title
+        subtitleLabel.text = errorViewModel.subtitle
+        bottomButton.setTitle(errorViewModel.bottomButtonTitle, for: .normal)
     }
 }

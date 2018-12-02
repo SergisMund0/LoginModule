@@ -8,14 +8,14 @@
 
 import Foundation
 
-final class ErrorPresenter {
+final class ErrorPresenter: ErrorPresenterInjection {
     // MARK: - Public properties
     var view: ErrorViewInjection?
 }
 
 // MARK: - ErrorViewDelegate
 extension ErrorPresenter: ErrorViewDelegate {
-    func viewDidSendUpdates(errorViewModel: ErrorViewModel) {
+    func bottomButtonDidPress() {
         guard let errorViewController = view as? ErrorViewController else { return }
         
         errorViewController.dismiss(animated: true, completion: nil)

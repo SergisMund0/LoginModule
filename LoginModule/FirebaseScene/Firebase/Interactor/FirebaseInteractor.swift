@@ -49,7 +49,7 @@ extension FirebaseInteractor: FirebaseInteractorInjection {
     }
     
     func processFirebaseErrorCode(_ error: NSError) {
-        let errorViewModel = ErrorViewModel(titleString: error.localizedDescription)
+        let errorViewModel = ErrorViewInjectionModel(subtitle: error.localizedDescription)
         routerDelegate?.sceneDidFinish(error: errorViewModel)
     }
 }

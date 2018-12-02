@@ -9,9 +9,10 @@
 import Foundation
 
 final class ErrorRouter: ErrorRouterInjection {
-    static func setup(errorViewModel: ErrorViewModel) -> ErrorViewInjection? {
+    static func setup(errorViewModel: ErrorViewInjectionModel) -> ErrorViewInjection? {
         var errorViewInjection = Bundle.main.loadNibNamed(ErrorViewController.nibName, owner: nil, options: nil)?[0] as? ErrorViewInjection
-        let presenter: ErrorViewDelegate = ErrorPresenter()
+        var presenter: ErrorPresenterInjection & ErrorViewDelegate = ErrorPresenter()
+        presenter.view = errorViewInjection
         errorViewInjection?.presenter = presenter
         
         errorViewInjection?.viewDidReceiveUpdates(errorViewModel: errorViewModel)

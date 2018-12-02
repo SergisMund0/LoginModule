@@ -8,12 +8,14 @@
 
 import Foundation
 
-struct ErrorViewModel {
-    let titleString: String
-    let bottomButtonString: String
+struct ErrorViewInjectionModel {
+    let title: String
+    let subtitle: String
+    let bottomButtonTitle: String
     
-    init(titleString: String, bottomButtonString: String = "Retry") {
-        self.titleString = titleString
-        self.bottomButtonString = bottomButtonString
+    init(title: String = ErrorResources.title, subtitle: String, bottomButtonTitle: String = ErrorResources.bottomButtonTitle) {
+        self.title = title
+        self.subtitle = subtitle
+        self.bottomButtonTitle = bottomButtonTitle
     }
 }

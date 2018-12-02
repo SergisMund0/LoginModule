@@ -17,6 +17,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgp-4p-l0V">
+                        <rect key="frame" x="25" y="70" width="364" height="61"/>
+                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-RS-rW5">
                         <rect key="frame" x="26.333333333333343" y="186" width="361.33333333333326" height="115"/>
                         <string key="text">Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test Test test test test </string>
@@ -31,12 +37,6 @@
                             <action selector="bottomButtonDidPress:" destination="Dx7-J9-n9M" eventType="touchUpInside" id="ggb-2g-u7e"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgp-4p-l0V">
-                        <rect key="frame" x="25" y="70" width="364" height="61"/>
-                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -54,7 +54,8 @@
             </view>
             <connections>
                 <outlet property="bottomButton" destination="o2f-6L-uYd" id="uzr-h0-EqL"/>
-                <outlet property="titleLabel" destination="ebb-RS-rW5" id="ac4-vu-O0v"/>
+                <outlet property="subtitleLabel" destination="ebb-RS-rW5" id="bcQ-lU-2lp"/>
+                <outlet property="titleLabel" destination="Mgp-4p-l0V" id="HVK-tK-Q2Y"/>
             </connections>
             <point key="canvasLocation" x="119" y="77"/>
         </viewController>

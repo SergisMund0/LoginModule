@@ -54,8 +54,8 @@ extension LoginPresenter: LoginViewDelegate {
 extension LoginPresenter: FirebaseRouterDelegate {
     // If the first local validation success but there is a problem with the network call,
     // the Error Scene will be invoked with the information returned from the server
-    func sceneDidFinish(error: ErrorViewModel) {
-        presentErrorScene(errorDescription: error.titleString)
+    func sceneDidFinish(error: ErrorViewInjectionModel) {
+        presentErrorScene(errorDescription: error.title)
     }
 }
 
@@ -90,7 +90,7 @@ extension LoginPresenter {
     }
     
     private func presentErrorScene(errorDescription: String) {
-        let errorViewModel = ErrorViewModel(titleString: errorDescription)
+        let errorViewModel = ErrorViewInjectionModel(subtitle: errorDescription)
         
         guard let errorViewController = (ErrorRouter.setup(errorViewModel: errorViewModel) as? ErrorViewController),
             let loginViewController = view as? LoginViewController else { return }

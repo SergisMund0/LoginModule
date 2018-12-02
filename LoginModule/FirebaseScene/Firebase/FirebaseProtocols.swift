@@ -25,5 +25,5 @@ protocol FirebaseRouterInjection {
 }
 
 protocol FirebaseRouterDelegate {
-    func sceneDidFinish(error: ErrorViewModel)
+    func sceneDidFinish(error: ErrorViewInjectionModel)
 }

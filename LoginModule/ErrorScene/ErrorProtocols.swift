@@ -11,11 +11,11 @@ import Foundation
 protocol ErrorViewInjection {
     var presenter: ErrorViewDelegate? { get set }
     
-    func viewDidReceiveUpdates(errorViewModel: ErrorViewModel)
+    func viewDidReceiveUpdates(errorViewModel: ErrorViewInjectionModel)
 }
 
 protocol ErrorViewDelegate {
-    func viewDidSendUpdates(errorViewModel: ErrorViewModel)
+    func bottomButtonDidPress()
 }
 
 protocol ErrorPresenterInjection {
@@ -23,5 +23,5 @@ protocol ErrorPresenterInjection {
 }
 
 protocol ErrorRouterInjection {
-    static func setup(errorViewModel: ErrorViewModel) -> ErrorViewInjection?
+    static func setup(errorViewModel: ErrorViewInjectionModel) -> ErrorViewInjection?
 }
